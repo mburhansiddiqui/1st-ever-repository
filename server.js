@@ -46,9 +46,16 @@ app.get('/home',(req,res)=>{
 app.get('/about' , (req,res) => {                   // res.send('About Page')
   res.render('about.hbs',{
   pagetitle: 'About Page',
+   });
 });
-  ;
+
+app.get('/projects' ,(req,res) => {
+  res.render('projects.hbs',{
+    pagetitle : 'New Projects'
+  });
 });
+
+
 app.listen(port,()=>{
   console.log("Server Running on PORT "+ port);
 });
